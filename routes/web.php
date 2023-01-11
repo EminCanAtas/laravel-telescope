@@ -24,4 +24,5 @@ Route::get('/', function () {
 Route::controller(KitapController::class)->group(function (){
     Route::get('/kitap/read','read');
     Route::get('/kitap/update/{name}/{id}','update');
+    Route::get('/kitap/delete/{id}','delete');
 });

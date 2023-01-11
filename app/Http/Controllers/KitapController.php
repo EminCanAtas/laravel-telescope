@@ -30,4 +30,11 @@ class KitapController extends Controller
         dd($id. " id' li kitabın ismi güncellendi. Log başarıyla oluşturuldu.");
 
     }
+
+    public function delete($id)
+    {
+        DeleteKitap::dispatch($id)->onQueue('high');
+
+        dd($id. " id' li kitap silinme sırasına alındı. 'php artisan queue:work' komutu ile sırayı çalıştırabilirsiniz.");
+    }
 }
