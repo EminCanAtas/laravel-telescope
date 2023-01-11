@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KitapController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+//Route::resource('/kitap',KitapController::class);
+
+Route::controller(KitapController::class)->group(function (){
+    Route::get('/kitap/read','read');
 });
