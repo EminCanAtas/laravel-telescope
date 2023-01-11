@@ -7,6 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## About Project
+
+Projeyi localinizde çalıştırmak için tabloları oluşturmalı ve API'lara url ile gitmelisiniz.
+
+- read => /kitap/read 
+- update => /kitap/update/{name}/{id}
+- delete => /kitap/delete/{id}
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
