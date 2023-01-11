@@ -18,4 +18,16 @@ class KitapController extends Controller
 
         dd('Kitaplar yazar relationları ile getirildi.',$kitaplar);
     }
+
+    public function update($name,$id)
+    {
+        Kitap::find($id)->update([
+            'kitap_adı' => $name
+        ]);
+
+        event(new UpdateLog($id));
+
+        dd($id. " id' li kitabın ismi güncellendi. Log başarıyla oluşturuldu.");
+
+    }
 }
